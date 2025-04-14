@@ -1,0 +1,69 @@
+{
+  "type": "commonjs",
+  "name": "servidor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint",
+    "prepare": "husky",
+    "migrations:generate": "sequelize-cli migration:generate --name",
+    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:revert": "sequelize-cli db:migrate:undo",
+    "migrations:delete": "sequelize-cli db:migrate:undo:all",
+    "seeds:generate": "sequelize-cli seed:generate --name",
+    "seeds:seed": "sequelize-cli db:seed --seed",
+    "seeds:run": "sequelize-cli db:seed:all",
+    "seeds:revert": "sequelize-cli db:seed:undo",
+    "seeds:delete": "sequelize-cli db:seed:undo:all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "keywords": [
+    "ssoa"
+  ],
+  "author": "Milton",
+  "license": "ISC",
+  "description": "Software SSOA",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.10",
+    "node-cron": "^3.0.3",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "resend": "^4.2.0",
+    "sequelize": "^6.37.5",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.5.1",
+    "sequelize-cli": "^6.6.2"
+  }
+}
