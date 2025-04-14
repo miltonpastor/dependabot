@@ -55,7 +55,7 @@
     "sequelize": "^6.37.5",
     "uuid": "^11.1.0",
     "winston": "^3.17.0",
-    "minimist": "0.0.8"
+    "minimist": "1.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
