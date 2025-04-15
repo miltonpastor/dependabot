@@ -1,3 +1,11 @@
+---
+name: 🛠️ Tarea General (Frontend + Backend)
+description: Describe una tarea que incluye trabajo en ambos repos
+title: "[TASK] "
+labels: ["tarea", "fullstack"]
+
+---
+
 ### *Alcance*
 Detalle de la solicitud
 
